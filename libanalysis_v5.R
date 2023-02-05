@@ -514,7 +514,7 @@ convert_previous <- function(lib) { #Finds the total number of occupancy in 4 ma
   colnames(c) <- c(1:ncol(c))
   return(c)
 }
-#RIGHT NOW YOU ARE HERE (BELOW)
+
 addcolumn <- function(lib) { #Adds GSR13, GSR45,GSR67, Total columns
   lib2 <- lib
   for (i in 2:nrow(lib2)) {
@@ -629,7 +629,7 @@ datafinder <- function(mon,section,time) { #Gives 7-8 average values for given m
   }
   return(result)
 }
-#######################ÇALIÞMA ALANI START ##################################
+####################### START ##################################
 GraphOverallDay <- function(mons) { #Takes a list of months, returns average occupancy (weekdays) per hour for each month
   capacity <- 120
   months <- c()
@@ -703,7 +703,7 @@ GraphOverallEnd2 <- function(mons) { #Takes a list of months, returns average oc
   d <- rbind(b,c)
   return(d)
 }
-##Alandýþý start
+##area start
 GraphSpacesDay <- function(mon) {
   c1 <- datafinder(mon,"L1","weekday") 
   c2 <- datafinder(mon,"Stacks","weekday")  
@@ -762,7 +762,7 @@ GraphSpacesEnd <- function(mon) {
   d <- rbind(b,c)
   return(d)
 }
-##Alandýþý end
+##area end
 GraphLevel1Day <- function(mons) {
   capacity <- 24
   months <- c()
@@ -1058,7 +1058,7 @@ Graph24HEnd <- function(mons) {
   d <- rbind(b,c)
   return(d)
 } 
-#########################ÇALIÞMA ALANI END ################################
+######################### END ################################
 seatminmax <- function(lib) { #Creates a list of individual seat according to their occupancy (descending order)
   #Editing name of the space is lengthy
   edit <- lib[,c(7:(GSR1_spot-1),(GSR1_spot+3):(ncol(lib)-6))]
@@ -1545,4 +1545,4 @@ exportxlsx <- function(...) {
   write.xlsx(fig20, file = "data.xlsx",sheetName="24HEnd", append=TRUE)
   
   
-} ####Çalýþma sahasý
+} #### work area end
