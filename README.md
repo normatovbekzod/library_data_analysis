@@ -1,4 +1,4 @@
-# [Project 1. Analyzing library data occupancy data](https://github.com/normatovbekzod/library_data_analysis)
+# Analyzing library data occupancy data
 ## Aim: 
 ### Develop 6 stages of the Data Analytics Life Cycle with the aim of analyzing Yale-NUS library occupancy data in order to reveal insights into when the library is the busiest and which sections of the library are under-used.
 ## Objectives:
